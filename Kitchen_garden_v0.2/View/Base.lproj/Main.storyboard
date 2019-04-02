@@ -284,6 +284,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cropSearchBar" destination="LdY-If-L9I" id="2H1-KC-aOb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGn-Tb-kUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,10 +9,12 @@
 import UIKit
 import os.log
 
-class SearchCropTableViewController: UITableViewController {
+class SearchCropTableViewController: UITableViewController, UISearchBarDelegate {
     
     //MARK: Properties
     var crops = [Crop]()
+    var filtered = [Crop]()
+    @IBOutlet weak var cropSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +27,10 @@ class SearchCropTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        //Set up delegate
+        cropSearchBar.delegate = self
     }
     
-    //Private change navigation bar background color
-//    private func changeNavBarColor() {
-//        let navBarAppearace = UINavigationBar.appearance()
-//        
-//    }
 
     // MARK: - Table view data source
 
